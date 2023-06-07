@@ -5,6 +5,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HomePage from './pages/HomePage';
 import NotFound from './pages/NotFound';
+import VideoCallPage from './pages/VideoCallPage';
 
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
        <BrowserRouter>
         {/* The rest of your app goes here */}
         <Routes>
-          <Route path='/' element={<HomePage />}></Route>
-          <Route path='*' element={<NotFound/>}></Route>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/:meetingID' element={<VideoCallPage />} />
+          <Route path='*' element={<NotFound/>} />
           
         </Routes>
   </BrowserRouter>
